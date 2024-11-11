@@ -1,0 +1,178 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo global para o corpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Estilo para títulos principais */
+h2 {
+    font-weight: 700;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #f9a825;
+    text-align: center;
+}
+
+/* Estilo dos parágrafos */
+p {
+    font-weight: 300;
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+}
+
+    p strong {
+        font-weight: 500;
+        color: #f9a825;
+    }
+
+/* Estilo para a seção "Home" */
+.home-section {
+    padding: 80px 20px;
+    background-color: #222;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Contêiner para o conteúdo da seção "Home" */
+.content-container {
+    max-width: 800px;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.text-container h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #f9a825;
+    margin-bottom: 10px;
+}
+
+.text-container h3 {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.text-container p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #e0e0e0;
+}
+
+/* Estilo do botão de contato */
+.contact-button {
+    background-color: #f9a825;
+    color: #1a1a1a;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+    .contact-button:hover {
+        background-color: #ffc107;
+    }
+
+/* Estilos para a seção de habilidades */
+.skills-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Estilos dos ícones de habilidade */
+.skill-icon {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    background-color: #333;
+    border-radius: 8px;
+}
+
+    .skill-icon img {
+        max-width: 70%;
+        max-height: 70%;
+        margin-bottom: 5px;
+    }
+
+    .skill-icon span {
+        font-size: 0.8em;
+        opacity: 0.9;
+        color: #f9f9f9;
+    }
+
+    .skill-icon:hover {
+        transform: scale(1.1);
+        background-color: #f9a825;
+        color: #000;
+    }
+
+/* Estilo para tooltip */
+.tooltip {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    pointer-events: none;
+    transform: translate(-50%, -100%);
+    white-space: nowrap;
+    z-index: 10;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .home-section {
+        justify-content: center;
+    }
+
+    .content-container {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .text-container h1 {
+        font-size: 2em;
+    }
+
+    .text-container h3 {
+        font-size: 1em;
+    }
+
+    .contact-button {
+        padding: 8px 16px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}

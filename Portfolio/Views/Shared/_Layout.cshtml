@@ -1,0 +1,149 @@
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+
+@{
+
+    string pt = "Este é o conteúdo em português.";
+    string en = "This is the content in English.";
+    string selectedLang = ViewBag.SelectedLang as string;
+}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Portfólio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link href="~/template/img/favicon.ico" rel="icon"> <!-- Caminho para wwwroot/template/images -->
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="~/template/lib/animate/animate.min.css" rel="stylesheet"> <!-- Caminho para wwwroot/template/lib -->
+    <link href="~/template/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"> <!-- Caminho para wwwroot/template/lib -->
+    <link href="~/template/lib/lightbox/css/lightbox.min.css" rel="stylesheet"> <!-- Caminho para wwwroot/template/lib -->
+    <!-- Template Stylesheet -->
+    <link href="~/template/css/style.css" rel="stylesheet"> <!-- Caminho para wwwroot/template/css -->
+
+    <style>
+        a[href="?lang=pt"],
+        a[href="?lang=en"] {
+            color: #ffffff;
+            font-weight: 600; /* Opcional: deixa o texto mais destacado */
+            text-decoration: none; /* Remove o sublinhado */
+        }
+
+            a[href="?lang=pt"]:hover,
+            a[href="?lang=en"]:hover {
+                color: #cccccc; /* Opcional: muda a cor ao passar o mouse */
+            }
+
+        .language-select a {
+            margin-right: 15px; /* Adiciona um espaço entre os links */
+            color: #808080; /* Personalize a cor conforme necessário */
+            text-decoration: none;
+        }
+
+            .language-select a:last-child {
+                margin-right: 0; /* Remove a margem à direita do último link */
+            }
+
+    </style>
+
+</head>
+
+
+<body>
+@switch (selectedLang)
+{
+    case "pt":
+            <!-- Início da Barra de Navegação -->
+            <div class="navbar navbar-expand-lg bg-light navbar-light">
+                <div class="container-fluid">
+                    <div class="language-select">
+                        <a href="?lang=pt">Português</a>
+                        <a href="?lang=en">English</a>
+                    </div>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav ml-auto">
+                            <a href="#home" class="nav-item nav-link active">Início</a>
+                            <a href="#about" class="nav-item nav-link">Sobre</a>
+                            <a href="#experience" class="nav-item nav-link">Experiência</a>
+                            <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fim da Barra de Navegação -->
+            break;
+
+        case "en":
+            <!-- Início da Barra de Navegação -->
+            <div class="navbar navbar-expand-lg bg-light navbar-light">
+                <div class="container-fluid">
+                    <div class="language-select">
+                        <a href="?lang=pt">Português</a>
+                        <a href="?lang=en">English</a>
+                    </div>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav ml-auto">
+                            <a href="#home" class="nav-item nav-link active">Home</a>
+                            <a href="#about" class="nav-item nav-link">About</a>
+                            <a href="#experience" class="nav-item nav-link">Experience</a>
+                            <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fim da Barra de Navegação -->
+        break;
+}
+
+
+
+    
+
+    <main>
+        @RenderBody()
+    </main>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="~/template/lib/easing/easing.min.js"></script> <!-- Caminho para wwwroot/template/lib -->
+    <script src="~/template/lib/wow/wow.min.js"></script> <!-- Caminho para wwwroot/template/lib -->
+    <script src="~/template/lib/waypoints/waypoints.min.js"></script> <!-- Caminho para wwwroot/template/lib -->
+    <script src="~/template/lib/typed/typed.min.js"></script> <!-- Caminho para wwwroot/template/lib -->
+    <script src="~/template/lib/owlcarousel/owl.carousel.min.js"></script> <!-- Caminho para wwwroot/template/lib -->
+    <script src="~/template/lib/isotope/isotope.pkgd.min.js"></script> <!-- Caminho para wwwroot/template/lib -->
+    <script src="~/template/lib/lightbox/js/lightbox.min.js"></script> <!-- Caminho para wwwroot/template/lib -->
+    <!-- Contact Javascript File -->
+    <script src="~/template/mail/jqBootstrapValidation.min.js"></script> <!-- Caminho para wwwroot/template/mail -->
+    <script src="~/template/mail/contact.js"></script> <!-- Caminho para wwwroot/template/mail -->
+    <!-- Template Javascript -->
+    <script src="~/template/js/main.js"></script> <!-- Caminho para wwwroot/template/js -->
+
+
+    
+</body>
+</html>

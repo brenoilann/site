@@ -1,0 +1,731 @@
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+
+@{
+
+    string pt = "Este é o conteúdo em português.";
+    string en = "This is the content in English.";
+    string selectedLang = ViewBag.SelectedLang as string;
+}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Breno Ilan - Backend Developer</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Developer Portfolio" name="keywords">
+    <meta content="Breno Ilan - Backend Developer, .NET, Software Development" name="description">
+
+    <!-- Favicon -->
+    <link href="~/template/img/favicon.ico" rel="icon"> <!-- Caminho para wwwroot/template/images -->
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="~/template/lib/animate/animate.min.css" rel="stylesheet"> <!-- Caminho para wwwroot/template/lib -->
+    <link href="~/template/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"> <!-- Caminho para wwwroot/template/lib -->
+    <link href="~/template/lib/lightbox/css/lightbox.min.css" rel="stylesheet"> <!-- Caminho para wwwroot/template/lib -->
+    <!-- Template Stylesheet -->
+    <link href="~/template/css/style.css" rel="stylesheet"> <!-- Caminho para wwwroot/template/css -->
+</head>
+
+
+
+
+@switch (selectedLang)
+{
+    case "pt":
+        <body data-spy="scroll" data-target=".navbar" data-offset="51">
+
+            <!-- Hero Start -->
+            <div class="hero" id="home">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="hero-content">
+                                <div class="hero-text">
+                                    <p>Olá! Eu sou</p>
+                                    <h1>Breno Ilan</h1>
+                                    <h2>.</h2>
+                                    <div class="typed-text">.NET Backend Developer, Software Developer, Web Developer, .NET Backend Developer</div>
+                                </div>
+                                <div class="hero-btn">
+                                    <a href="mailto:breno18ilan@gmail.com?subject=Contato%20Profissional&body=Olá%20Breno,%0D%0A%0D%0Agostaria%20de%20entrar%20em%20contato%20para..." class="btn">
+                                        Entre em contato
+                                    </a>
+                                    
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 d-none d-md-block">
+                            <div class="hero-image">
+                                <img src="~/template/img/file.png" alt="Imagem Hero"> <!-- Caminho para wwwroot/template/images -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <!-- Hero End -->
+            <!-- Sobre Início -->
+            <div class="about wow fadeInUp" data-wow-delay="0.1s" id="about">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="about-img">
+                                <img src="~/template/img/ss.png" alt="Imagem"> <!-- Caminho para wwwroot/template/images -->
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <div class="about-content">
+                                <div class="section-header text-left">
+                                    <p>Saiba Mais Sobre Mim</p>
+                                    <h2>Experiência & Habilidades</h2>
+                                </div>
+                                <div class="about-text">
+                                    <p>
+                                        Desenvolvedor Backend com experiência em C#, .NET, SQL Server, ASP.NET Core MVC, .NET MAUI e gerenciamento de banco de dados. Hábil em criar APIs robustas e sistemas backend para diversas indústrias.
+                                    </p>
+                                </div>
+                                <div class="skills">
+                                    <div class="skill-name">
+                                        <p>C#</p><p>95%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="skill-name">
+                                        <p>SSMS</p><p>80%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="skill-name">
+                                        <p>ASP.NET Core MVC</p><p>92%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="skill-name">
+                                        <p>.NET 8.0</p><p>91%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="skill-name">
+                                        <p>Entity Framework</p><p>90%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="skill-name">
+                                        <p>Identity Framework</p><p>90%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="skill-name">
+                                        <p>RESTful APIs</p><p>93%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="skill-name">
+                                        <p>GitHub</p><p>85%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="skill-name">
+                                        <p>JavaScript</p><p>65%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="skill-name">
+                                        <p>Cibersegurança</p><p>75%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="hero-btn">
+                                    <a href="~/files/CV_BrenoIlan_PT.pdf" download="CV-Breno-Ilan.pdf" class="btn">
+                                        Baixe o meu CV
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sobre Fim -->
+
+
+
+            <!-- Experiência Início -->
+            <div class="experience" id="experience">
+                <div class="container">
+                    <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                        <p>Minha carreira</p>
+                        <h2>Experiência Profissional</h2>
+                    </header>
+                    <div class="timeline">
+                        <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                            <div class="timeline-text">
+                                <div class="timeline-date">2024</div>
+                                <h2>.NET Backend Developer</h2>
+                                <h4>Cruz Vermelha Portuguesa</h4>
+                                <p>
+                                    Desenvolvi uma aplicação web para gestão de voluntários utilizando ASP.NET Core MVC, LINQ, SSMS, JavaScript, AJAX, HTML, CSS, .NET 8.0, Entity Framework, Identity Framework e pacotes NuGet.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+                            <div class="timeline-text">
+                                <div class="timeline-date">2022 - 2023</div>
+                                <h2>Marketing/Desenvolvedor web</h2>
+                                <h4>Lusoservica</h4>
+                                <p>
+                                    Desenvolvi e gerenciei estratégias de marketing como também criei um site institucional com um sistema de recepção de dados de candidaturas espontâneas.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                            <div class="timeline-text">
+                                <div class="timeline-date">2019 - 2021</div>
+                                <h2>Marketing/Desenvolvedor Web</h2>
+                                <h4>Livery Brand</h4>
+                                <p>
+                                    Criei uma plataforma de e-commerce e gerenciei estratégias de vendas online durante a pandemia.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+           
+            <!-- Experiência Fim -->
+
+
+            <!-- Formação Profissional Início -->
+            <div class="education" id="education">
+                <div class="container">
+                    <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                        <p>Minha Formação</p>
+                        <h2>Formação Profissional</h2>
+                    </header>
+                    <div class="timeline">
+                        <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                            <div class="timeline-text">
+                                <div class="timeline-date">2024</div>
+                                <h2>Software Developer</h2>
+                                <h4>Cesae Digital - Braga</h4>
+                                <p>
+                                    Formação completa em desenvolvimento de software, cobrindo Engenharia de Software, Bases de Dados e Programação em SQL, com foco em algoritmos, programação estruturada e orientada a objetos. A formação incluiu desenvolvimento web (client-side e server-side), integração de sistemas, e desenvolvimento mobile para iOS e Android(Kotlin). Também foram abordadas Comunicação Interpessoal e Inglês Técnico, essenciais para o trabalho em ambientes colaborativos e globais.
+                                </p>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+                            <div class="timeline-text">
+                                <div class="timeline-date">2024</div>
+                                <h2>C# for .NET Developers</h2>
+                                <h4>COURSERA</h4>
+                                <p>
+                                    Este curso aprofunda os fundamentos da programação C# dentro da estrutura .NET. Iniciando com conceitos básicos, o curso avança para tópicos mais complexos, incluindo programação orientada a objetos e outros tópicos.
+                                </p>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+                            <div class="timeline-text">
+                                <div class="timeline-date">2016 ~ 2018</div>
+                                <h2>Marketing</h2>
+                                <h4>Faculdade FANESE</h4>
+                                <p>
+                                    Licenciatura concluída em Marketing, com aproveitamento das disciplinas de Publicidade. Formação focada em estratégias de mercado e gestão de marcas.
+                                </p>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                            <div class="timeline-text">
+                                <div class="timeline-date">2014 ~ 2016</div>
+                                <h2>Publicidade e Propaganda</h2>
+                                <h4>Universidade Tiradentes (UNIT)</h4>
+                                <p>
+                                    Curso de licenciatura focado em estratégias de comunicação e publicidade. Formação iniciada, mas não concluída.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Formação Profissional Fim -->
+            <!-- Portfólio Início -->
+            <div class="portfolio" id="portfolio">
+                <div class="container">
+                    <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                        <p>Meu Portfólio</p>
+                        <h2>Projetos Recentes</h2>
+                    </div>
+                    <div class="row portfolio-container">
+                        <!-- Item 1: Site de E-commerce -->
+                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+                            <div class="portfolio-wrap">
+                                <div class="portfolio-img">
+                                    <img src="~/template/img/portfolio-1.jpg" alt="Imagem"> <!-- Caminho para wwwroot/template/images -->
+                                </div>
+                                <div class="portfolio-text">
+                                    <h3>Site institucional</h3>
+                                   
+                                </div>
+                                <p>Web site com uma api embutida capaz de coletar dados de candidatos a trabalho, recebendo os dados e enviando por e-mail para os responsáveis do RH.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 2: Cruz Vermelha Portuguesa -->
+                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="portfolio-wrap">
+                                <div class="portfolio-img">
+                                    <img src="~/template/img/portfolio-2.jpg" alt="Cruz Vermelha Portuguesa"> <!-- Caminho para imagem -->
+                                </div>
+                                <div class="portfolio-text">
+                                    <h3>Gestão de Voluntários</h3>                                   
+                                </div>
+                                <p>Web API robusta criada para o gerenciamento de voluntários da Cruz Vermelha Portuguesa. Inicialmente, apenas voltada para voluntários, mas graças a escalabilidade foi capaz de implementações até para gerenciamento de ambulâncias e gerenciamento logístico.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 3: Sistema de Restauração 1 -->
+                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="portfolio-wrap">
+                                <div class="portfolio-img">
+                                    <img src="~/template/img/portfolio-3.jpg" alt="Sistema de Restauração 1"> <!-- Caminho para imagem -->
+                                </div>
+                                <div class="portfolio-text">
+                                    <h3>Sistema de Restauração</h3>
+                                   
+                                </div>
+                                <p>Sistema de frente de caixa, em ASP NET Core MVC, utilizando protocolos LINQ e AJAX, para entrar em contato com o banco de dados, por muitas vezes sem alterar a interface facilitando a utilização para o usuário. Capaz de fazer frente de caixa como também controlo financeiro.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 4: Sistema de Encomendas -->
+                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-4 wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="portfolio-wrap">
+                                <div class="portfolio-img">
+                                    <img src="~/template/img/portfolio-4.jpg" alt="Sistema de Encomendas"> <!-- Caminho para imagem -->
+                                </div>
+                                <div class="portfolio-text">
+                                    <h3>Sistema de Encomendas</h3>
+                                    
+                                </div>
+                                <p>Sistema de gerenciamento de encomendas para uma fábrica de estofados. Utilizando .NET 8.0 e ASP.NET Core, uma ferramenta que auxiliou no controle, organização e controle financeiro. </p>
+                            </div>
+                        </div>
+
+                        <!-- Item 5: Sistema de Restauração 2 -->
+                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-5 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="portfolio-wrap">
+                                <div class="portfolio-img">
+                                    <img src="~/template/img/portfolio-5.jpg" alt="Sistema de Restauração 2"> <!-- Caminho para imagem -->
+                                </div>
+                                <div class="portfolio-text">
+                                    <h3>Sistema de Restauração</h3>
+                                    
+                                </div>
+                                <p>Sistema mais simples. Com uma lista de itens declarada em cima de uma única view e um único controlador, utilizando JavaScript e AJAX para que o usuário fosse capaz de selecionar os itens na mesma hora, obter um valor e fazer um cálculo simples.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Portfólio Fim -->
+            <!-- Rodapé Início -->
+            <div class="footer wow fadeIn" data-wow-delay="0.3s">
+                <div class="container-fluid">
+                    <div class="container">
+                        <div class="footer-info">
+                            <h2>Breno Ilan</h2>
+                            <h3>4710-058 - Braga, Portugal</h3>
+                            <div class="footer-menu">
+                                <p>+351 912 787 910</p>
+                                <p>breno18ilan@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container copyright">
+                        <p>&copy; Breno Ilan.</p>
+                            <p>Todos os direitos reservados.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Rodapé Fim -->
+            <!-- Botão de Voltar ao Topo -->
+            <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        </body>
+
+
+        break;
+
+    case "en":
+    default:
+        <body data-spy="scroll" data-target=".navbar" data-offset="51">
+
+            <!-- Hero Start -->
+            <div class="hero" id="home">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="hero-content">
+                                <div class="hero-text">
+                                    <p>Hello! I am</p>
+                                    <h1>Breno Ilan</h1>
+                                    <h2>.</h2>
+                                    <div class="typed-text">.NET Backend Developer, Software Developer, Web Developer, .NET Backend Developer</div>
+                                </div>
+                                <div class="hero-btn">
+                                    <a href="mailto:breno18ilan@gmail.com?subject=Professional%20Contact&body=Hello%20Breno,%0D%0A%0D%0AI%20would%20like%20to%20get%20in%20touch%20to..." class="btn">
+                                        Contact Me
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 d-none d-md-block">
+                            <div class="hero-image">
+                                <img src="~/template/img/file.png" alt="Hero Image"> <!-- Path to wwwroot/template/images -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <!-- Hero End -->
+            <!-- About Start -->
+            <div class="about wow fadeInUp" data-wow-delay="0.1s" id="about">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="about-img">
+                                <img src="~/template/img/ss.png" alt="Image"> <!-- Path to wwwroot/template/images -->
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="about-content">
+                                <div class="section-header text-left">
+                                    <p>Learn More About Me</p>
+                                    <h2>Experience & Skills</h2>
+                                </div>
+                                <div class="about-text">
+                                    <p>
+                                        Backend Developer experienced in C#, .NET, SQL Server, ASP.NET Core MVC, .NET MAUI, and database management. Skilled in creating robust APIs and backend systems across various industries.
+                                    </p>
+                                </div>
+                                <div class="skills">
+                                    <div class="skill-name">
+                                        <p>C#</p><p>95%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="skill-name">
+                                        <p>SSMS</p><p>80%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="skill-name">
+                                        <p>ASP.NET Core MVC</p><p>92%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="skill-name">
+                                        <p>.NET 8.0</p><p>91%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="skill-name">
+                                        <p>Entity Framework</p><p>90%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="skill-name">
+                                        <p>Identity Framework</p><p>90%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="skill-name">
+                                        <p>RESTful APIs</p><p>93%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="skill-name">
+                                        <p>GitHub</p><p>85%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="skill-name">
+                                        <p>JavaScript</p><p>65%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="skill-name">
+                                        <p>Cybersecurity</p><p>75%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="hero-btn">
+                                    <a href="~/files/CV_BrenoIlan_EN.pdf" download="CV-Breno-Ilan.pdf" class="btn">
+                                        Download My CV
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About End -->
+            <!-- Experience Start -->
+            <div class="experience" id="experience">
+                <div class="container">
+                    <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                        <p>My Career</p>
+                        <h2>Professional Experience</h2>
+                    </header>
+                    <div class="timeline">
+                        <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                            <div class="timeline-text">
+                                <div class="timeline-date">2024</div>
+                                <h2>.NET Backend Developer</h2>
+                                <h4>Portuguese Red Cross</h4>
+                                <p>
+                                    Developed a web application for volunteer management using ASP.NET Core MVC, LINQ, SSMS, JavaScript, AJAX, HTML, CSS, .NET 8.0, Entity Framework, Identity Framework, and NuGet packages.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+                            <div class="timeline-text">
+                                <div class="timeline-date">2022 - 2023</div>
+                                <h2>Marketing/Web Developer</h2>
+                                <h4>Lusoservica</h4>
+                                <p>
+                                    Developed and managed marketing strategies, and created an institutional website with a candidate data collection system.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                            <div class="timeline-text">
+                                <div class="timeline-date">2019 - 2021</div>
+                                <h2>Marketing/Web Developer</h2>
+                                <h4>Livery Brand</h4>
+                                <p>
+                                    Created an e-commerce platform and managed online sales strategies during the pandemic.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Experience End -->
+            <!-- Education Start -->
+            <div class="education" id="education">
+                <div class="container">
+                    <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                        <p>My Education</p>
+                        <h2>Professional Training</h2>
+                    </header>
+                    <div class="timeline">
+                        <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                            <div class="timeline-text">
+                                <div class="timeline-date">2024</div>
+                                <h2>Software Developer</h2>
+                                <h4>Cesae Digital - Braga</h4>
+                                <p>
+                                    Comprehensive training in software development, covering Software Engineering, Databases, and SQL Programming, with a focus on algorithms, structured and object-oriented programming. The program included web development (client-side and server-side), systems integration, and mobile development for iOS and Android (Kotlin). Interpersonal Communication and Technical English were also addressed, essential for collaborative and global work environments.
+                                </p>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+                            <div class="timeline-text">
+                                <div class="timeline-date">2024</div>
+                                <h2>C# for .NET Developers</h2>
+                                <h4>COURSERA</h4>
+                                <p>
+                                    This course delves into the fundamentals of C# programming within the .NET framework. Starting with basic concepts, it progresses to more complex topics, including object-oriented programming.
+                                </p>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+                            <div class="timeline-text">
+                                <div class="timeline-date">2016 ~ 2018</div>
+                                <h2>Marketing</h2>
+                                <h4>FANESE College</h4>
+                                <p>
+                                    Bachelor's degree in Marketing, with courses in Advertising. Focused on market strategies and brand management.
+                                </p>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                            <div class="timeline-text">
+                                <div class="timeline-date">2014 ~ 2016</div>
+                                <h2>Advertising</h2>
+                                <h4>Universidade Tiradentes (UNIT)</h4>
+                                <p>
+                                    Undergraduate course focused on communication and advertising strategies. Started but not completed.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Education End -->
+            <!-- Portfolio Start -->
+            <div class="portfolio" id="portfolio">
+                <div class="container">
+                    <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                        <p>My Portfolio</p>
+                        <h2>Recent Projects</h2>
+                    </div>
+                    <div class="row portfolio-container">
+                        <!-- Item 1: Institutional Website -->
+                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+                            <div class="portfolio-wrap">
+                                <div class="portfolio-img">
+                                    <img src="~/template/img/portfolio-1.jpg" alt="Image"> <!-- Path to wwwroot/template/images -->
+                                </div>
+                                <div class="portfolio-text">
+                                    <h3>Institutional Website</h3>
+                                </div>
+                                <p>Website with an embedded API capable of collecting job candidate data, receiving submissions, and sending emails to HR managers.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 2: Portuguese Red Cross -->
+                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="portfolio-wrap">
+                                <div class="portfolio-img">
+                                    <img src="~/template/img/portfolio-2.jpg" alt="Portuguese Red Cross"> <!-- Path to image -->
+                                </div>
+                                <div class="portfolio-text">
+                                    <h3>Volunteer Management</h3>
+                                </div>
+                                <p>Robust Web API created for managing volunteers at the Portuguese Red Cross. Initially focused on volunteers, but due to scalability, it was later expanded to ambulance and logistical management.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 3: Restaurant System 1 -->
+                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="portfolio-wrap">
+                                <div class="portfolio-img">
+                                    <img src="~/template/img/portfolio-3.jpg" alt="Restaurant System 1"> <!-- Path to image -->
+                                </div>
+                                <div class="portfolio-text">
+                                    <h3>Restaurant System</h3>
+                                </div>
+                                <p>Point-of-sale system built with ASP.NET Core MVC, using LINQ and AJAX protocols to communicate with the database, often without altering the user interface. Capable of both point-of-sale operations and financial control.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 4: Order Management System -->
+                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-4 wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="portfolio-wrap">
+                                <div class="portfolio-img">
+                                    <img src="~/template/img/portfolio-4.jpg" alt="Order Management System"> <!-- Path to image -->
+                                </div>
+                                <div class="portfolio-text">
+                                    <h3>Order Management System</h3>
+                                </div>
+                                <p>Order management system for a custom upholstery factory, built with .NET 8.0 and ASP.NET Core. Helps in controlling orders, organization, and financial management.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 5: Restaurant System 2 -->
+                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-5 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="portfolio-wrap">
+                                <div class="portfolio-img">
+                                    <img src="~/template/img/portfolio-5.jpg" alt="Restaurant System 2"> <!-- Path to image -->
+                                </div>
+                                <div class="portfolio-text">
+                                    <h3>Restaurant System</h3>
+                                </div>
+                                <p>Simpler system with a list of items declared in a single view and controller, using JavaScript and AJAX, allowing users to select items, view prices, and perform simple calculations in real time.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Portfolio End -->
+            <!-- Footer Start -->
+            <div class="contact" id="contact">
+            <div class="footer wow fadeIn" data-wow-delay="0.3s">
+                <div class="container-fluid">
+                    <div class="container">
+                        <div class="footer-info">
+                            <h2>Breno Ilan</h2>
+                            <h3>4710-058 - Braga, Portugal</h3>
+                            <div class="footer-menu">
+                                <p>+351 912 787 910</p>
+                                <p>breno18ilan@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container copyright">
+                        <p>&copy; Breno Ilan.</p>
+                        <p>All rights reserved.</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Footer End -->
+            <!-- Back to top button -->
+            <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        </body>
+
+        break;
+}
+
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="~/template/lib/easing/easing.min.js"></script> <!-- Caminho para wwwroot/template/lib -->
+    <script src="~/template/lib/wow/wow.min.js"></script> <!-- Caminho para wwwroot/template/lib -->
+    <script src="~/template/lib/owlcarousel/owl.carousel.min.js"></script> <!-- Caminho para wwwroot/template/lib -->
+    <script src="~/template/lib/isotope/isotope.pkgd.min.js"></script> <!-- Caminho para wwwroot/template/lib -->
+    <script src="~/template/js/main.js"></script> <!-- Caminho para wwwroot/template/js -->
+
+
+
+    
+
+</html>
